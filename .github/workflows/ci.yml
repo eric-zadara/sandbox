@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Run python container
+        uses: docker://python:2.7
+        with:
+          entrypoint: /bin/bash
+          args: -e -c 'echo hi'
