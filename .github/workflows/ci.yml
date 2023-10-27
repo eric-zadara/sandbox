@@ -9,8 +9,7 @@ jobs:
       fail-fast: false
     steps:
       - name: Run python container
-        #uses: docker://python:2.7
-        uses: docker://ubuntu:20.04
+        uses: docker://python:2.7
         with:
           entrypoint: /bin/bash
           args: -c "echo '::group::Test';python --version; echo '::endgroup::'"
