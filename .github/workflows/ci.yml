@@ -9,7 +9,8 @@ jobs:
       fail-fast: false
     steps:
       - name: Run python container
-        uses: docker://python:2.7
+        #uses: docker://python:2.7
+        uses: docker://ubuntu:20.04
         with:
           entrypoint: /bin/bash
           args: |
