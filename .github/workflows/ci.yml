@@ -17,4 +17,7 @@ jobs:
             echo '::group::Test'
             python --version
             echo '::endgroup::'
+            echo '::group::Test2'
+            whoami
+            echo '::endgroup::'
             "
