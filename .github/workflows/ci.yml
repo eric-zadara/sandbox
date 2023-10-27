@@ -13,4 +13,4 @@ jobs:
         uses: docker://ubuntu:20.04
         with:
           entrypoint: /bin/bash
-          args: -c 'echo\ hi'
+          args: -c "echo hi"
