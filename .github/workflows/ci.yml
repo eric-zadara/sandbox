@@ -13,4 +13,4 @@ jobs:
         with:
           entrypoint: /bin/bash
           args: |
-            -c 'echo hi;'
+            -c 'echo hi'
