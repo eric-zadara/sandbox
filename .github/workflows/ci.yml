@@ -1,10 +1,15 @@
 on:
   workflow_dispatch:
+    inputs:
+      gh_runs_on:
+        required: false
+        type: string
+
   push:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.gh_runs_on || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
     steps:
