@@ -12,4 +12,4 @@ jobs:
         uses: docker://python:2.7
         with:
           entrypoint: /bin/bash
-          args: -c 'echo hi'
+          args: -c 'echo hi;'
