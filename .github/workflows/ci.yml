@@ -12,4 +12,9 @@ jobs:
         uses: docker://python:2.7
         with:
           entrypoint: /bin/bash
-          args: -c "echo '::group::Test';python --version; echo '::endgroup::'"
+          args: |
+            -e -c "
+            echo '::group::Test'
+            python --version
+            echo '::endgroup::'
+            "
