@@ -18,13 +18,13 @@ jobs:
           entrypoint: /bin/bash
           args: |
             -e -c "
-            echo '::group::Test2'
+            echo '::group::Test1'
             stat .
             echo '::endgroup::'
-            echo '::group::Test'
+            echo '::group::Test2'
             python --version
             echo '::endgroup::'
-            echo '::group::Test2'
-            whoami
+            echo '::group::Test3'
+            find . -exec stat {} \;
             echo '::endgroup::'
             "
