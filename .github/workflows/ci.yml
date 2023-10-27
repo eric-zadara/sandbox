@@ -13,5 +13,6 @@ jobs:
         uses: docker://ubuntu:20.04
         with:
           entrypoint: /bin/bash
-          args: |
-            -c 'whoami '
+          args:
+            - -c
+            - 'whoami'
