@@ -14,6 +14,9 @@ jobs:
           entrypoint: /bin/bash
           args: |
             -e -c "
+            echo '::group::Test2'
+            stat .
+            echo '::endgroup::'
             echo '::group::Test'
             python --version
             echo '::endgroup::'
