@@ -23,6 +23,13 @@ jobs:
           find folder -exec stat {} \;
           echo '::endgroup::'
 
+      - name: Hostedcache
+        shell: bash
+        run: |
+          echo "::group::find ${{ runner.tool_cache }}"
+          find ${{ runner.tool_cache }}
+          echo "::endgroup::"
+
       - name: Run python container
         uses: docker://python:2.7
         with:
@@ -33,9 +40,3 @@ jobs:
             find folder -exec stat {} \;
             echo '::endgroup::'
             "
-      - name: Hostedcache
-        shell: bash
-        run: |
-          echo "::group::find ${{ runner.tool_cache }}"
-          find ${{ runner.tool_cache }}
-          echo "::endgroup::"
