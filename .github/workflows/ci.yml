@@ -33,3 +33,9 @@ jobs:
             find folder -exec stat {} \;
             echo '::endgroup::'
             "
+      - name: Hostedcache
+        shell: bash
+        run: |
+          echo "::group::find ${{ runner.tool_cache }}"
+          find ${{ runner.tool_cache }}
+          echo "::endgroup::"
